@@ -10,6 +10,28 @@
 @import url(nice-select.css);
 
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+scrollbar-width: auto;
+scrollbar-color: #0c426e #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: #0c426e;
+border-radius: 10px;
+border: 3px solid #ffffff;
+}
+
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
 * {
@@ -251,6 +273,22 @@ img.padding_right_10 {
     width: 33%;
     float: left;
 }
+.logo a:hover{
+    opacity:75%;
+}
+.site-logo{
+    width:80px;
+    height:80px;
+}
+@media only screen and (max-width: 991px) {
+    .logo{
+        float:none;
+    }
+    .site-logo{
+        height:60px;
+        width:75px;
+    }
+}
 .menu_text {
     width: 10%;
     float: right;
@@ -322,6 +360,7 @@ img.padding_right_10 {
     padding-bottom: 90px;
     background-color: #fafafa;
     height: auto;
+    min-height:625px;
 }
 
 .banner_img {
@@ -444,18 +483,7 @@ img.padding_right_10 {
     text-align: center;
     font-weight: bold;
 }
-.services_taital::after {
-    content: '';
-    position: absolute;
-    width: 85px;
-    height: 10px;
-    background-color: #000;
-    left: 0px;
-    right: 0px;
-    margin: 0 auto;
-    bottom: 0px;
-    border-radius: 100px;
-}
+
 
 .services_text {
     width: 100%;
@@ -581,6 +609,7 @@ img.padding_right_10 {
 .choose_section {
     width: 100%;
     float: left;
+    margin-bottom:30px;
 }
 .choose_box {
     width: 100%;
@@ -596,7 +625,7 @@ img.padding_right_10 {
 .choose_box:hover .trusted_text{
     color: #ffffff;
 }
-.choose_box:hover .dummy_text{
+.choose_box:hover .body_text_card{
     color: #ffffff;
 }
 .number_1{
@@ -623,7 +652,7 @@ img.padding_right_10 {
     padding-top: 5px;
     font-weight: 600;
 }
-.dummy_text {
+.body_text_card {
     width: 100%;
     font-size: 14px;
     color: #000;
@@ -915,17 +944,17 @@ input.Enter_text::placeholder {
 
 /* instagram button class*/
 
-.instagramBtn {
+.phoneBtn {
     background: #ffffff;
 }
 
-.instagramBtn:before {
+.phoneBtn:before {
     font-family: "FontAwesome";
-    content: "\f0d5";
+    content: "\f095";
     /* add instagrm icon */
 }
 
-.instagramBtn:hover {
+.phoneBtn:hover {
     color: #ffffff;
     background: #0c426e;
 }
